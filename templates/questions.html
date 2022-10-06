@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Please answer!{% endblock %}
+{% block content %}
+<section>
+    <p>{{q}}</p>
+    <form action="/answer" method="POST">
+        {% for c in choicesList %}
+        <input type="radio" name="{{page_num}}" value="{{c}}" />
+        <label for="{{page_num}}">{{c}}</label>
+        {% endfor %}
+        <input type="number" name="page_num" style="display: none;" value={{page_num}} />
+        <button>Next</button>
+    </form>
+</section>
+{% endblock %}
