@@ -5,8 +5,8 @@
     <h1>Thanks for your time!</h1>
     <p>Your responses were</p>
     <ul>
-    {% for r in responses %}
-    <li>{{r}}</li>
+    {% for (k,v) in ans.items() %}
+    <li>{{k}}: {{v}}</li>
     {% endfor %}
 </ul>
 </section>

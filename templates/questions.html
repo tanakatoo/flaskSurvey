@@ -8,6 +8,9 @@
         <input type="radio" name="{{page_num}}" value="{{c}}" />
         <label for="{{page_num}}">{{c}}</label>
         {% endfor %}
+        {% if allow_text == True %}
+        <textarea cols=10 name="comments"></textarea> 
+        {% endif %}
         <input type="number" name="page_num" style="display: none;" value={{page_num}} />
         <button>Next</button>
     </form>
