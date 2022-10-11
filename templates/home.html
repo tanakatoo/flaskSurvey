@@ -2,11 +2,16 @@
 {% block title %}Questionnaire!{% endblock %}
 {% block content %}
 <section>
-    <h1>{{t}}</h1>
-    <p>{{i}}</p>
+    <h1>Survey Time!</h1>
     <form action="/setSession" method="POST">
-        <form action="/questions/0">
-        <button>Start!</button>
+        <label for="survey">Choose a survey:</label>
+
+        <select name="surveyName" id="survey">
+            <option value="satisfaction">{{surveys.satisfaction.title}}</option>
+            <option value="personality">{{surveys.personality.title}}</option>
+        </select>
+
+        <button>Select</button>
     </form>
 </section>
 {% endblock %}
